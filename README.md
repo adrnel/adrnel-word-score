@@ -1,6 +1,7 @@
 # adrnel-word-score
 
-A simple and efficient TypeScript library for calculating word scores, ideal for word-based games like Scrabble. `adrnel-word-score` only has one function currently which takes any string input and calculates a score based on each character's position in the alphabet. There are plans to add more functions
+A simple and efficient TypeScript library for calculating word scores, ideal for word-based games.
+`adrnel-word-score` only has one function currently which takes any string input and calculates a score based on each character's position in the alphabet. There are plans to add more functions
 
 ## Installation
 

@@ -1,0 +1,1 @@
+export { scoreString } from './alphabetScoring';

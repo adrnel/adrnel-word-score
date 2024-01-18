@@ -1,8 +1,8 @@
 {
   "name": "adrnel-word-score",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "A toolkit designed to assist in computing word scores for various games",
-  "main": "index.js",
+  "main": "dist/index.js",
   "scripts": {
     "test": "jest"
   },
