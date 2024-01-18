@@ -43,7 +43,7 @@ This function calculates the score of a given string based on each character's p
 Contributions are welcome!
 
 ## License
-This project is licensed under the ISC License.
+This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md) file for details.
 
 ## Acknowledgments
 Thanks to all contributors who have helped to improve this library.
