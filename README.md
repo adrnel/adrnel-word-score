@@ -1,7 +1,7 @@
 # adrnel-word-score
 
-A simple and efficient TypeScript library for calculating word scores, ideal for word-based games.
-`adrnel-word-score` only has one function currently which takes any string input and calculates a score based on each character's position in the alphabet. There are plans to add more functions
+A simple and efficient TypeScript library for calculating word scores, ideal for word-based games like Scrabble.
+`adrnel-word-score` only has two functions currently. The first function is `alphabetOrderScoring` which takes any string input and calculates a score based on each character's position in the alphabet. The second function is `scrabbleScoring` which takes any string input and calculates a score based on the scores for each letter in Scrabble. There are plans to add more functions.
 
 ## Installation
 
@@ -15,24 +15,27 @@ npm install adrnel-word-score
 Import adrnel-word-score into your TypeScript or JavaScript project and use it to calculate word scores:
 
 ```bash
-import { scoreString } from 'adrnel-word-score';
+import { alphabetOrderScoring, scrabbleScoring } from 'adrnel-word-score';
 
-const score = scoreString('example');
-console.log(score); // Output will be the score of the word 'example'
+const alphabetScore = alphabetOrderScoring('example');
+console.log(alphabetScore); // Output will be 76
+
+const scrabbleScore = scrabbleScoring('example');
+console.log(scrabbleScore); // Output will be 18
 ```
 
 ## Features
-- Simple Scoring Algorithm: Calculates scores based on alphabetic position.
+- Simple Scoring Algorithms.
 - Easy Integration: Can be integrated into any TypeScript or JavaScript project.
 - Lightweight: Has minimal dependencies and a small footprint.
 
 ## API Reference
 
-The `user-word-score` library currently includes the following function:
+The `adrnel-word-score` library currently includes the following functions:
 
-### `scoreString(str: string): number`
+### `alphabetOrderScoring(str: string): number`
 
-This function calculates the score of a given string based on each character's position in the alphabet. It's useful for word-based games where each letter has a point value.
+This function calculates the score of a given string based on each character's position in the alphabet.
 
 #### Parameters:
 - `str` (string): The string for which the score will be calculated.
@@ -40,8 +43,76 @@ This function calculates the score of a given string based on each character's p
 #### Returns:
 - `number`: The calculated score of the string. Each alphabetic character adds a value to the score equal to its position in the alphabet (e.g., 'a' = 1, 'b' = 2, etc.). Non-alphabetic characters are ignored.
 
-## Contributing
-Contributions are welcome!
+### `scrabbleScoring(str: string): number`
+
+This function calculates the score of a given string based on each letters value in Scrabble. 
+
+#### Parameters:
+- `str` (string): The string for which the score will be calculated.
+
+#### Returns:
+- `number`: The calculated score of the string based on each letters value in Scrabble. Non-alphabetic characters are ignored.
+
+## Development
+### For the package maintainer:
+Install dependencies with:
+```bash
+npm install
+```
+
+Make changes within the `src` folder.
+
+Build the project to verify your changes:
+```bash
+npm run build
+```
+
+Run tests to ensure everything passes:
+```bash
+npm test
+```
+
+Increment the version in `package.json`
+
+Commit and tag the changes
+```bash
+git add .
+git commit -m "Add feature or fix bug description"
+git push
+git tag vx.x.x
+git push origin vx.x.x
+```
+
+Log in to NPM using
+```bash
+npm login
+```
+
+Publish your package using
+```bash
+npm publish
+```
+
+### For contributers:
+Fork or clone the repository.
+Install dependencies with:
+```bash
+npm install
+```
+
+Make changes within the `src` folder.
+
+Build the project to verify your changes:
+```bash
+npm run build
+```
+
+Run tests to ensure everything passes:
+```bash
+npm test
+```
+
+Submit a pull request with your changes.
 
 ## License
 This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md) file for details.

@@ -1,1 +1,2 @@
-export { scoreString } from './alphabetScoring';
+export { alphabetOrderScoring } from './alphabetOrderScoring';
+export { scrabbleScoring } from './scrabbleScoring';
