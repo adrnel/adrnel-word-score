@@ -1,4 +1,4 @@
-export const scoreString = (str: string): number => {
+export const alphabetOrderScoring = (str: string): number => {
   let score = 0;
   for (let i = 0; i < str.length; i++) {
       let char = str[i].toLowerCase();
